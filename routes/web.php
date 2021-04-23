@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+Route::group(['middleware' => 'auth', 'prefix' => 'admin46842'], function () {
+    Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/referals', 'ReferalController@index')->name('admin.referal.index');
+});
