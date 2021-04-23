@@ -14,8 +14,15 @@ class CreateReferalsTable extends Migration
     public function up()
     {
         Schema::create('referals', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
+            $table->integer('category_id');
+            $table->char('name');
+            $table->char('description', '300');
+            $table->char('link', '300');
+            $table->bigInteger('nb_click');
+            $table->integer('active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
