@@ -14,7 +14,7 @@ class ReferalCategorieController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.referals.categories.index');
     }
 
     /**
