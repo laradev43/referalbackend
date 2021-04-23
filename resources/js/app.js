@@ -4,7 +4,14 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+require('./core/jquery.min');
 require('./bootstrap');
+require('./core/popper.min');
+require('./core/bootstrap-material-design.min');
+require('./plugins/bootstrap-notify');
+require('./plugins/chartist.min');
+require('./plugins/perfect-scrollbar.jquery.min');
+require('./material-dashboard.min')
 
 window.Vue = require('vue');
 
