@@ -42,6 +42,16 @@ class RegisterController extends Controller
     }
 
     /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showRegistrationForm()
+    {
+        abort('404');
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
