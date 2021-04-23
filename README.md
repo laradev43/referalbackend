@@ -1,3 +1,15 @@
+<p>Procédure d'installation :</p>
+<ul>
+<li>Clone du git</li>
+<li>Composer install</li>
+<li>php artisan key:generate</li>
+<li>Config de la BDD dans le .env, copier le .env.exemple en .env</li>
+<li>php artisan migrate</li>
+<li>php artisan passport install</li>
+<li>npm install && npm run dev</li>
+</ul>
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
