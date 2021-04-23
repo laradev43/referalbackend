@@ -22,6 +22,22 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // Add user on install
+        \Illuminate\Support\Facades\DB::table('users')
+            ->insert([
+                'name' => 'olcy',
+                'email' => 'me@olcy.fr',
+                'email_verified_at' => \Carbon\Carbon::now(),
+                'password' => \Illuminate\Support\Facades\Hash::make('olcylebest123')
+            ]);
+        \Illuminate\Support\Facades\DB::table('users')
+            ->insert([
+                'name' => 'lameule',
+                'email' => 'beenjaminb@gmail.com',
+                'email_verified_at' => \Carbon\Carbon::now(),
+                'password' => \Illuminate\Support\Facades\Hash::make('olcylebest123')
+            ]);
     }
 
     /**
